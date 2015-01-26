@@ -82,9 +82,8 @@
             UIImage *image = nil;
             NSData *imageData = [NSData dataWithContentsOfURL:imageURL options:0 error:&error];
                           
-            if (imageData != nil) {
+            if (imageData != nil)
                 image = [UIImage imageWithData:imageData];
-            }
                           
             // …and back to the main queue to display the image.
             dispatch_async(dispatch_get_main_queue(), ^{
